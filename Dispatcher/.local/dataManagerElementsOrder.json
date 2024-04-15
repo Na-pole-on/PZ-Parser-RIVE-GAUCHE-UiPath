@@ -68,8 +68,6 @@
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str&Sequence_13",
-        "dt_hrefs&Sequence_13",
         "dt_brantsTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -99,8 +97,7 @@
       "Path": "RiveGauche/RiveGauche_GetHrefFromBrand.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_hrefsIntermediate&Sequence_1",
-        "ExtractDataTable&Sequence_1"
+        "dt_hrefsIntermediate&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
