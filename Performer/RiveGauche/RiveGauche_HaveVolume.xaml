@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="RiveGauche_HaveVolume" this:RiveGauche_HaveVolume.in_str_href="https://rivegauche.ru/product/ds-durga-crystal-pistil-eau-de-parfum-50" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RiveGauche_HaveVolume" this:RiveGauche_HaveVolume.in_str_href="https://rivegauche.ru/product/ds-durga-grapefruit-generation-eau-de-parfum-50" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_href" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>847.2,993.5999999999999</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>688.8,1499.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RiveGauche_HaveVolume_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -35,6 +35,17 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -66,19 +77,50 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RiveGauche_HaveVolume" sap:VirtualizedContainerService.HintSize="473.6,928.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RiveGauche_HaveVolume" sap:VirtualizedContainerService.HintSize="699.2,1434.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="childrenUiElement" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_IsVolumes" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_address" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_product" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_volume" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:UiElementExists DisplayName="Does it contain other volumes" Exists="[bool_IsVolumes]" sap:VirtualizedContainerService.HintSize="411.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists DisplayName="Does it contain other volumes" Exists="[bool_IsVolumes]" sap:VirtualizedContainerService.HintSize="636.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e97dd5c9-4259-40db-bf0c-856f4258e142" InformativeScreenshot="9c2caa665d329121b3ea1034855af033" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='{0}' /&gt;&lt;webctrl tag='DIV' innertext=' Выберите объем (мл) ' /&gt;&quot;, in_str_href)]" TimeoutMS="10000">
           <ui:Target.WaitForReady>
@@ -93,7 +135,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:UiElementExists>
-    <If Condition="[bool_IsVolumes]" sap:VirtualizedContainerService.HintSize="411.2,669.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[bool_IsVolumes]" sap:VirtualizedContainerService.HintSize="636.8,1175.2" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -101,15 +143,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="377.6,486.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="603.2,992" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FindChildren Children="[childrenUiElement]" DisplayName="Find Children" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="334.4,86.4" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
-            <ui:FindChildren.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="edd0bb1e-7aa5-4885-b191-ab82c8cd7eae" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='{0}' /&gt;&lt;webctrl tag='DIV' class='variants ng-star-inserted' /&gt;&quot;, in_str_href)]">
+          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dt_volume]" DisplayName="Extract Structured Data" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="560,86.4" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
+            <ui:ExtractData.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="03c3af6c-5c52-47fc-ac56-edfd05d23625" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='{0}' /&gt;&lt;webctrl tag='PRODUCT-VARIANT-SELECTOR' /&gt;&quot;, in_str_href)]">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -117,24 +159,60 @@
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
-            </ui:FindChildren.Target>
-          </ui:FindChildren>
-          <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="334.4,270.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[childrenUiElement]">
-            <ui:ForEach.Body>
-              <ActivityAction x:TypeArguments="ui:UiElement">
+            </ui:ExtractData.Target>
+          </ui:ExtractData>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_volume]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,776" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:UiElement" Name="child" />
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526.4,588" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe DS&amp;Durga'" sap:VirtualizedContainerService.HintSize="483.2,498.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="94bc88532f074c8eaf7ea65159a3266d" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='{0}' /&gt;&quot;, in_str_href)]">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,351.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[row(0).ToString()]" />
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RiveGauche\RiveGauche_GetInfoFromSite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RiveGauche\RiveGauche_GetInfoFromSite.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_href">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(0).ToString()" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsColor">
+                                <Literal x:TypeArguments="x:Boolean" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsVolumes">
+                                <Literal x:TypeArguments="x:Boolean" />
+                              </InArgument>
+                              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_address">
+                                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_address" />
+                              </OutArgument>
+                              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_product">
+                                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_product" />
+                              </OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                  </ui:BrowserScope>
                 </Sequence>
               </ActivityAction>
-            </ui:ForEach.Body>
-          </ui:ForEach>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
         </Sequence>
       </If.Then>
       <If.Else>

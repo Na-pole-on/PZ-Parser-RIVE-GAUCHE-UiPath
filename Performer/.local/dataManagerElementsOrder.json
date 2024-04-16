@@ -35,8 +35,131 @@
     {
       "Path": "Framework/KillAllProcesses.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "list_processesToKill&Sequence_2"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_NavigateToProduct.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_GetDataFromProductPage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_IsVolumes&Sequence_2",
+        "bool_IsColor&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_HaveColor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_3",
+        "dt_colors&Sequence_3",
+        "str_color&Sequence_1",
+        "dt_product&Sequence_1",
+        "dt_address&Sequence_1",
+        "ie_ui_children&Sequence_1",
+        "bool_IsColor&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_HaveVolume.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_volume&Sequence_1",
+        "dt_product&Sequence_1",
+        "dt_address&Sequence_1",
+        "bool_IsVolumes&Sequence_1",
+        "childrenUiElement&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_GetInfoFromSite.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_IsVolumeExists&Sequence_2",
+        "str_color&Sequence_2",
+        "str_volume&Sequence_2",
+        "str_fullPrice&Sequence_2",
+        "str_discountedPrice&Sequence_2",
+        "bool_IsFinePrice&Sequence_2",
+        "list_city&Sequence_1",
+        "str_city&Sequence_1",
+        "str_id&Sequence_2",
+        "str_name&Sequence_2",
+        "str_address&Sequence_1",
+        "ie_ui_children&Sequence_1",
+        "ie_ui_address&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt_product",
+        "out_dt_address",
+        "in_bool_IsVolumes",
+        "in_bool_IsColor",
+        "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RiveGauche/RiveGauche_HaveNothing.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_product&Sequence_1",
+        "dt_address&Sequence_1",
+        "bool_IsColor&Sequence_1",
+        "bool_IsVolumes&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_href"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
