@@ -55,7 +55,9 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_href&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_Config"
@@ -90,15 +92,14 @@
       "Path": "RiveGauche/RiveGauche_HaveColor.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_3",
+        "int_idOfProduct&Sequence_7",
         "dt_colors&Sequence_3",
-        "str_color&Sequence_1",
         "dt_product&Sequence_1",
         "dt_address&Sequence_1",
-        "ie_ui_children&Sequence_1",
         "bool_IsColor&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_bool_IsColor",
         "in_str_href"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -108,6 +109,7 @@
       "Path": "RiveGauche/RiveGauche_HaveVolume.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "int_idOfProduct&Sequence_6",
         "dt_volume&Sequence_1",
         "dt_product&Sequence_1",
         "dt_address&Sequence_1",
@@ -115,6 +117,7 @@
         "childrenUiElement&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_bool_IsVolume",
         "in_str_href"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -124,6 +127,7 @@
       "Path": "RiveGauche/RiveGauche_GetInfoFromSite.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_IsCity&Sequence_2",
         "bool_IsVolumeExists&Sequence_2",
         "str_color&Sequence_2",
         "str_volume&Sequence_2",
@@ -152,13 +156,46 @@
       "Path": "RiveGauche/RiveGauche_HaveNothing.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_product&Sequence_1",
+        "int_idOfProduct&Sequence_1",
         "dt_address&Sequence_1",
-        "bool_IsColor&Sequence_1",
-        "bool_IsVolumes&Sequence_1"
+        "dt_product&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_str_href"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Database/Database_AddProduct.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_color&Sequence_1",
+        "str_full_price&Sequence_1",
+        "str_discounted_price&Sequence_1",
+        "str_volume&Sequence_1",
+        "str_product_name&Sequence_1",
+        "str_product_id&Sequence_1",
+        "dt_idFromDb&Sequence_1",
+        "dc_connection&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_int_id",
+        "in_dt_product"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Database/Database_AddAddresses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dc_connection&Sequence_1",
+        "str_address&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_addresses",
+        "in_int_idOfProduct"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
