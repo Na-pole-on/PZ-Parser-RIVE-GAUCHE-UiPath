@@ -150,9 +150,15 @@
                             </ui:InvokeWorkflowFile>
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RiveGauche\RiveGauche_GetHrefFromBrand.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="RiveGauche\RiveGauche_GetHrefFromBrand.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_str_brand">[row("brand").ToString().Trim()]</InArgument>
-                                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_hrefs">[io_dt_TransactionData]</InOutArgument>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_str_brand">
+                                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;brand&quot;).ToString().Trim()" />
+                                </InArgument>
+                                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_hrefs">
+                                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="io_dt_TransactionData" />
+                                </InOutArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                  <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                                </InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </Sequence>

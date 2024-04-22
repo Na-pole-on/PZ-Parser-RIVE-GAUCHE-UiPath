@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="in_str_href" Type="InArgument(x:String)" />
     <x:Property Name="in_bool_IsVolume" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_list_cities" Type="InArgument(scg:IList(x:String))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -187,11 +188,24 @@
                   </ui:BrowserScope>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RiveGauche\RiveGauche_GetInfoFromSite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RiveGauche\RiveGauche_GetInfoFromSite.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_href">[row(0).ToString()]</InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsColor">False</InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsVolumes">False</InArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_address">[dt_address]</OutArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_product">[dt_product]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_href">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(0).ToString()" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsColor">
+                        <Literal x:TypeArguments="x:Boolean" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsVolumes">
+                        <Literal x:TypeArguments="x:Boolean" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_address">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_address" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_product">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_product" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="scg:IList(x:String)" x:Key="in_list_city">
+                        <VisualBasicValue x:TypeArguments="scg:IList(x:String)" ExpressionText="in_list_cities" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Database\Database_AddProduct.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Database\Database_AddProduct.xaml">

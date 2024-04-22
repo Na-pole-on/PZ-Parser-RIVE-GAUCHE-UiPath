@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_str_href" Type="InArgument(x:String)" />
     <x:Property Name="in_bool_IsColor" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_list_cities" Type="InArgument(scg:IList(x:String))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>847.2,784.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847.2,1680</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RiveGauche_HasColor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +110,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RiveGauche_HasColor" sap:VirtualizedContainerService.HintSize="473.6,720" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RiveGauche_HasColor" sap:VirtualizedContainerService.HintSize="699.2,1615.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_IsColor" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_address" />
@@ -120,7 +121,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_bool_IsColor]" sap:VirtualizedContainerService.HintSize="411.2,608" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_bool_IsColor]" sap:VirtualizedContainerService.HintSize="636.8,1503.2" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,7 +129,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="377.6,424.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="603.2,1320" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dt_colors" />
           </Sequence.Variables>
@@ -137,7 +138,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dt_colors]" DisplayName="Get all name of colors" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
+          <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dt_colors]" DisplayName="Get all name of colors" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="560,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
             <ui:ExtractData.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d9cdc2f-cc8f-49e5-87a5-473557c1ef40" InformativeScreenshot="4aaa60fbb30c0d5215c6b99aa6c51673" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='{0}' /&gt;&lt;webctrl tag='PRODUCT-VARIANT-SELECTOR' /&gt;&quot;, in_str_href)]">
                 <ui:Target.TimeoutMS>
@@ -155,7 +156,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExtractData>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_colors]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_colors]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1083.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -195,11 +196,24 @@
                   </ui:BrowserScope>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RiveGauche_GetInfoFromSite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RiveGauche\RiveGauche_GetInfoFromSite.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_href">[row(0).ToString()]</InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsColor">True</InArgument>
-                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsVolumes">False</InArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_address">[dt_address]</OutArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_product">[dt_product]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_href">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(0).ToString()" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsColor">
+                        <Literal x:TypeArguments="x:Boolean" Value="True" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Boolean" x:Key="in_bool_IsVolumes">
+                        <Literal x:TypeArguments="x:Boolean" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_address">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_address" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_product">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_product" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="scg:IList(x:String)" x:Key="in_list_city">
+                        <VisualBasicValue x:TypeArguments="scg:IList(x:String)" ExpressionText="in_list_cities" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Database\Database_AddProduct.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Database\Database_AddProduct.xaml">

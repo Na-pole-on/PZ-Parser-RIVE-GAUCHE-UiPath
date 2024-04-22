@@ -56,6 +56,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_cities&Sequence_1",
         "str_href&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -79,6 +80,7 @@
       "Path": "RiveGauche/RiveGauche_GetDataFromProductPage.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_cities&Sequence_1",
         "bool_IsVolumes&Sequence_2",
         "bool_IsColor&Sequence_2"
       ],
@@ -99,6 +101,7 @@
         "bool_IsColor&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_list_cities",
         "in_bool_IsColor",
         "in_str_href"
       ],
@@ -117,6 +120,7 @@
         "childrenUiElement&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_list_cities",
         "in_bool_IsVolume",
         "in_str_href"
       ],
@@ -127,6 +131,7 @@
       "Path": "RiveGauche/RiveGauche_GetInfoFromSite.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_IsWeight&Sequence_2",
         "bool_IsCity&Sequence_2",
         "bool_IsVolumeExists&Sequence_2",
         "str_color&Sequence_2",
@@ -143,6 +148,7 @@
         "ie_ui_address&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_list_city",
         "out_dt_product",
         "out_dt_address",
         "in_bool_IsVolumes",
@@ -161,6 +167,7 @@
         "dt_product&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_list_cities",
         "in_str_href"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -197,6 +204,27 @@
         "in_dt_addresses",
         "in_int_idOfProduct"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Database/Database_GetCities.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_cities&Sequence_1",
+        "dc_connection&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_list_cities"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

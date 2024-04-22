@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>847.2,1456</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847.2,1435.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RiveGauche_GetHrefFromBrand_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +109,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RiveGauche_GetHrefFromBrand" sap:VirtualizedContainerService.HintSize="668.8,1391.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RiveGauche_GetHrefFromBrand" sap:VirtualizedContainerService.HintSize="668.8,1370.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_hrefsIntermediate" />
     </Sequence.Variables>
@@ -118,13 +118,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe РИВ'" sap:VirtualizedContainerService.HintSize="606.4,1279.2" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="629cfe4f49d61894218c02697dcdc8aa" Selector="&lt;html app='chrome.exe' url='https://rivegauche.ru/brands*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe РИВ'" sap:VirtualizedContainerService.HintSize="606.4,1258.4" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="629cfe4f49d61894218c02697dcdc8aa" Selector="&lt;html app='chrome.exe' url='https://rivegauche.ru/brands*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,1132" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,1111.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -170,12 +170,9 @@
                 </ui:Target>
               </ui:WaitUiElementVanish.Target>
             </ui:WaitUiElementVanish>
-            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dt_hrefsIntermediate]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='product-item' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" SimulateClick="{x:Null}" ContinueOnError="True" DataTable="[dt_hrefsIntermediate]" DisplayName="Extract Structured Data" ExtractMetadata="&lt;extract&gt;&#xA;&#x9;&lt;column exact='1' name='Column0' attr='href'&gt;&#xA;&#x9;&#x9;&lt;webctrl tag='div' /&gt;&#xA;&#x9;&#x9;&lt;webctrl tag='product-item' /&gt;&#xA;&#x9;&#x9;&lt;webctrl tag='div' idx='1' /&gt;&#xA;&#x9;&#x9;&lt;webctrl tag='div' idx='1' /&gt;&#xA;&#x9;&#x9;&lt;webctrl tag='a' idx='1' /&gt;&#xA;&#x9;&lt;/column&gt;&#xA;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510.4,86.4" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" NextLinkSelector="&lt;webctrl aaname='Вперед*' tag='A' /&gt;">
               <ui:ExtractData.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="78146c54-aedb-4a87-9a4c-a4a743287bda" InformativeScreenshot="d8cce8e4bf0ab5dc54e4b5d2b51f2f23" Selector="&lt;html app='chrome.exe' url='https://rivegauche.ru/brands/*' /&gt;&lt;webctrl tag='CMS-PRODUCT-LISTING' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2cda4f52-3460-4a01-838c-8a16a469ce68" Selector="&lt;html app='chrome.exe' url='https://rivegauche.ru/brands/*' /&gt;&lt;webctrl tag='CMS-PRODUCT-LISTING' /&gt;" TimeoutMS="10000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
